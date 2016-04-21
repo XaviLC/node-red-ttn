@@ -155,7 +155,7 @@ module.exports = function(RED) {
 			obj.node = node.hex(8);
 			if (!isASCII(str)) {
 				obj.base64 = btoa(str);
-				console.log(work.toHexString());
+				//console.log(work.toHexString());
 			}
 			else {
 				obj.string = str;
