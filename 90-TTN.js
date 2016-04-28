@@ -155,6 +155,8 @@ module.exports = function(RED) {
 			obj.node = node.hex(8);
 			if (!isASCII(str)) {
 				obj.base64 = btoa(str);
+				var b = new Buffer(decrypted.base64,'base64');
+				obj.inHex = b.toString('hex');
 				//console.log(work.toHexString());
 			}
 			else {
