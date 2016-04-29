@@ -106,7 +106,7 @@ module.exports = function(RED) {
 		}
 
 		function isASCII(str) {
-			return (extended ? /^[\x00-\xFF]*$/ : /^[\x00-\x7F]*$/).test(str);
+			return (/^[\x00-\x7F]*$/).test(str);
 		}
 
 		function deCrypt(data,key,iv) {
